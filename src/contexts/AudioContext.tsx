@@ -100,71 +100,60 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   }, [])
 
-  const playTrack = (track: AudioTrack) => {
-    try {
-      // Stop current track if playing
-      if (howlRef.current) {
-        howlRef.current.stop()
-        howlRef.current.unload()
-      }
+ const playTrack = (track: AudioTrack) => {
+  try {
+    // Stop current track if playing
+    if (howlRef.current) {
+      howlRef.current.stop()
+      howlRef.current.unload()
+      howlRef.current = null
+    }
 
-      // Create new Howl instance with better error handling
-      howlRef.current = new Howl({
-        src: [track.url],
-        loop: true,
-        volume: isMuted ? 0 : volume,
-        html5: true, // Use HTML5 Audio for better compatibility
-        onload: () => {
-          console.log('Audio loaded successfully:', track.name)
-        },
-        onplay: () => {
-          setIsPlaying(true)
-          setCurrentTrack(track)
-          console.log('Playing:', track.name)
-        },
-        onpause: () => {
-          setIsPlaying(false)
-        },
-        onstop: () => {
-          setIsPlaying(false)
-        },
-        onloaderror: (_id: any, error: any) => {
-          console.error('Audio load error for', track.name, ':', error)
-          setIsPlaying(false)
-          setCurrentTrack(null)
-          // Show user-friendly error message
-          console.warn(`Unable to load audio: ${track.name}. Please check your internet connection.`)
-        },
-        onplayerror: (_id: any, error: any) => {
-          console.error('Audio play error for', track.name, ':', error)
-          setIsPlaying(false)
-          // Try to unlock audio context (common issue on mobile)
-          if (howlRef.current) {
-            howlRef.current.once('unlock', () => {
-              howlRef.current?.play()
-            })
-          }
-        },
-      })
-
-      // Attempt to play
-      const playPromise = howlRef.current.play()
-      if (playPromise !== undefined) {
-        // Handle play promise for better browser compatibility
-        if (typeof playPromise === 'object' && playPromise.catch) {
-          playPromise.catch((error: any) => {
-            console.error('Play promise rejected:', error)
-            setIsPlaying(false)
+    // Create new Howl instance
+    howlRef.current = new Howl({
+      src: [track.url],
+      loop: true,
+      volume: isMuted ? 0 : volume,
+      html5: true,
+      onload: () => {
+        console.log('Audio loaded successfully:', track.name)
+      },
+      onplay: () => {
+        setIsPlaying(true)
+        setCurrentTrack(track)
+        console.log('Playing:', track.name)
+      },
+      onpause: () => {
+        setIsPlaying(false)
+      },
+      onstop: () => {
+        setIsPlaying(false)
+      },
+      onloaderror: (_id: any, error: any) => {
+        console.error('Audio load error for', track.name, ':', error)
+        setIsPlaying(false)
+        setCurrentTrack(null)
+        console.warn(`Unable to load audio: ${track.name}. Please check your internet connection.`)
+      },
+      onplayerror: (_id: any, error: any) => {
+        console.error('Audio play error for', track.name, ':', error)
+        setIsPlaying(false)
+        if (howlRef.current) {
+          howlRef.current.once('unlock', () => {
+            howlRef.current?.play()
           })
         }
-      }
-    } catch (error) {
-      console.error('Error in playTrack:', error)
-      setIsPlaying(false)
-      setCurrentTrack(null)
-    }
-  }
+      },
+    })
 
+    // Start playing
+    howlRef.current.play()
+  } catch (error) {
+    console.error('Error in playTrack:', error)
+    setIsPlaying(false)
+    setCurrentTrack(null)
+  }
+}
   const pauseAudio = () => {
     if (howlRef.current && isPlaying) {
       howlRef.current.pause()
