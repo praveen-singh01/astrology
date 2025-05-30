@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
 import {
   OmIcon,
   LotusIcon,
@@ -11,7 +10,6 @@ import {
 } from '@/components/icons/SacredIcons'
 
 const PujaPage: React.FC = () => {
-  const { t } = useTranslation(['common'])
   const [selectedPuja, setSelectedPuja] = useState<string | null>(null)
   const [bookingStep, setBookingStep] = useState<'details' | 'payment' | 'confirmation'>('details')
   const [bookingData, setBookingData] = useState({
@@ -631,6 +629,7 @@ const PujaPage: React.FC = () => {
                   </button>
                 </div>
               </form>
+              )}
             </motion.div>
           </div>
         </section>
