@@ -1,0 +1,73 @@
+{
+  "buttons": {
+    "bookConsultation": "परामर्श बुक करें",
+    "exploreServices": "सेवाएं देखें",
+    "startJourney": "अपनी यात्रा शुरू करें",
+    "chatNow": "अभी चैट करें",
+    "callNow": "अभी कॉल करें",
+    "login": "लॉगिन",
+    "register": "पंजीकरण",
+    "learnMore": "और जानें",
+    "getStarted": "शुरू करें",
+    "viewAll": "सभी देखें",
+    "readMore": "और पढ़ें"
+  },
+  "navigation": {
+    "home": "होम",
+    "services": "सेवाएं",
+    "consultation": "परामर्श",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क",
+    "horoscope": "राशिफल",
+    "kundli": "कुंडली",
+    "astrologers": "ज्योतिषी",
+    "blog": "ब्लॉग"
+  },
+  "audio": {
+    "play": "चलाएं",
+    "pause": "रोकें",
+    "volume": "आवाज़",
+    "mute": "मूक",
+    "unmute": "आवाज़ चालू करें",
+    "selectMantra": "मंत्र चुनें",
+    "backgroundAudio": "पृष्ठभूमि ऑडियो",
+    "spiritualSounds": "आध्यात्मिक ध्वनियां",
+    "nowPlaying": "अब चल रहा है",
+    "stop": "बंद करें",
+    "autoPlay": "स्वचालित चलाना",
+    "enabled": "ऑडियो सक्षम",
+    "disabled": "ऑडियो अक्षम",
+    "settings": "ऑडियो सेटिंग्स"
+  },
+  "language": {
+    "english": "English",
+    "hindi": "हिंदी",
+    "selectLanguage": "भाषा चुनें",
+    "changeLanguage": "भाषा बदलें"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "warning": "चेतावनी",
+    "info": "जानकारी",
+    "close": "बंद करें",
+    "save": "सेव करें",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "view": "देखें",
+    "share": "साझा करें",
+    "download": "डाउनलोड करें"
+  },
+  "mantras": {
+    "omNamahShivaya": "ॐ नमः शिवाय",
+    "gayatriMantra": "गायत्री मंत्र",
+    "mahamrityunjaya": "महामृत्युंजय मंत्र",
+    "hanuman": "हनुमान चालीसा",
+    "ganesh": "गणेश मंत्र",
+    "lakshmi": "लक्ष्मी मंत्र",
+    "saraswati": "सरस्वती मंत्र"
+  }
+}

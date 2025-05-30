@@ -1,0 +1,19 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="temple" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <g opacity="0.3">
+        <!-- Temple structure -->
+        <rect x="30" y="70" width="60" height="40" fill="currentColor"/>
+        <rect x="25" y="65" width="70" height="8" fill="currentColor"/>
+        <polygon points="60,30 35,65 85,65" fill="currentColor"/>
+        <rect x="55" y="75" width="10" height="30" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="40" y="75" width="8" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+        <rect x="72" y="75" width="8" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="60" cy="50" r="3" fill="currentColor"/>
+        <rect x="57" y="25" width="6" height="10" fill="currentColor"/>
+        <circle cx="60" cy="22" r="3" fill="currentColor"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="120" height="120" fill="url(#temple)"/>
+</svg>

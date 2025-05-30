@@ -1,0 +1,57 @@
+{
+  "brand": {
+    "name": "Kashi Vedic",
+    "nameHi": "काशी वैदिक",
+    "description": "Connect with ancient Vedic wisdom through personalized astrology consultations and spiritual guidance."
+  },
+  "services": {
+    "title": "Services",
+    "dailyHoroscope": "Daily Horoscope",
+    "kundliAnalysis": "Kundli Analysis",
+    "birthChart": "Birth Chart",
+    "liveConsultation": "Live Consultation",
+    "pujaBooking": "Puja Booking",
+    "gemstones": "Gemstones",
+    "vastu": "Vastu Shastra"
+  },
+  "company": {
+    "title": "Company",
+    "aboutUs": "About Us",
+    "ourAstrologers": "Our Astrologers",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "legal": {
+    "title": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "refundPolicy": "Refund Policy",
+    "disclaimer": "Disclaimer"
+  },
+  "social": {
+    "title": "Connect With Us",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "twitter": "Twitter"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "phone": "+91 98765 43210",
+    "email": "info@kashivedic.com",
+    "address": "Varanasi, Uttar Pradesh, India",
+    "hours": "Available 24/7 for spiritual guidance"
+  },
+  "newsletter": {
+    "title": "Daily Spiritual Insights",
+    "description": "Receive daily horoscopes and spiritual guidance directly in your inbox.",
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Please enter a valid email address"
+  },
+  "copyright": "© {year} Kashi Vedic Astrology. All rights reserved. | Made with 🙏 for spiritual seekers",
+  "blessing": "🕉️ Om Namah Shivaya 🕉️"
+}
