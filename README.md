@@ -75,7 +75,7 @@ The static files will be generated in the `out/` directory.
 
 ### Live Demo
 
-Visit the live website: [https://yourusername.github.io/astrology](https://yourusername.github.io/astrology)
+Visit the live website: [https://praveen-singh01.github.io/astrology](https://praveen-singh01.github.io/astrology)
 
 ## Project Structure
 
