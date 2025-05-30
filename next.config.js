@@ -2,31 +2,24 @@
 const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
-  // Enable static export for GitHub Pages
-  output: 'export',
+  // For Vercel deployment, we don't need static export
+  // output: 'export',
   
-  // Disable image optimization for static export
+  // Image optimization works on Vercel
   images: {
-    unoptimized: true,
+    domains: [],
+    // Remove unoptimized setting for Vercel
+    // unoptimized: true,
   },
   
-  // Configure base path for GitHub Pages (will be set by environment variable)
-  basePath: process.env.NODE_ENV === 'production',
+  // No need for basePath on Vercel
+  // basePath: process.env.NODE_ENV === 'production' ? '/astrology' : '',
   
-  // Configure asset prefix for GitHub Pages
-  assetPrefix: process.env.NODE_ENV === 'production',
-  
-  // Disable server-side features for static export
-  trailingSlash: true,
+  // No need for assetPrefix on Vercel
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/astrology' : '',
   
   // Configure i18n for static export
   i18n: undefined, // Disable Next.js built-in i18n for static export
-  
-  // Experimental features
-  experimental: {
-    // Enable app directory
-    appDir: true,
-  },
   
   // Configure webpack for better builds
   webpack: (config, { isServer }) => {
@@ -46,37 +39,20 @@ const nextConfig = {
     CUSTOM_KEY: 'my-value',
   },
   
-  // Configure redirects (will be handled by GitHub Pages)
+  // These features work with Vercel deployment
+  // Configure redirects
   async redirects() {
     return []
   },
   
-  // Configure rewrites (will be handled by GitHub Pages)
+  // Configure rewrites
   async rewrites() {
     return []
   },
   
   // Configure headers
   async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ]
+    return []
   },
 }
 

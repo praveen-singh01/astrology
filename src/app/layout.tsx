@@ -30,6 +30,7 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://kashi-astrology.vercel.app'),
   title: 'Kashi Vedic Astrology - Divine Guidance & Spiritual Wisdom | काशी वैदिक ज्योतिष',
   description: 'Discover your spiritual path with expert Vedic astrology consultations, daily horoscopes, and divine guidance. Connect with experienced astrologers for personalized insights into your life journey. | विशेषज्ञ वैदिक ज्योतिष परामर्श के साथ अपना आध्यात्मिक मार्ग खोजें।',
   keywords: 'Vedic astrology, Hindu astrology, spiritual consultation, daily horoscope, kundli, puja booking, temple services, वैदिक ज्योतिष, हिंदू ज्योतिष, आध्यात्मिक परामर्श, दैनिक राशिफल, कुंडली',
