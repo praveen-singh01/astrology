@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { Suspense } from 'react'
 import {
   OmIcon,
   LotusIcon,
@@ -18,6 +19,7 @@ import {
 import AutoPlayAudio from '@/components/audio/AutoPlayAudio'
 import SectionDivider, { AnimatedShloka, FloatingSacredMotifs } from '@/components/common/SectionDivider'
 import DarkModeToggle from '@/components/common/DarkModeToggle'
+import LoadingFallback from '@/components/common/LoadingFallback'
 
 // Enhanced animated card component
 const AnimatedCard = ({
@@ -338,7 +340,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <AutoPlayAudio />
+      <Suspense fallback={<LoadingFallback message="Initializing spiritual audio..." />}>
+        <AutoPlayAudio />
+      </Suspense>
       <HeroSection />
 
       {/* Premium Enhanced Services Section */}
