@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/praveensingh/Downloads/astrology/src/app/layout\":[\"static/media/e4af272ccee01ff0-s.p.woff2\",\"static/media/8cf328e5ba29ec21-s.p.woff2\",\"static/media/73fd63d6adb7b86c-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
