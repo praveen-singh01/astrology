@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "title": "Discover Your Divine Path",
+    "subtitle": "Connect with ancient Vedic wisdom through personalized astrology consultations, spiritual guidance, and divine blessings.",
+    "description": "Experience the profound wisdom of Hindu astrology with our expert astrologers who guide you through life's journey using time-tested Vedic principles."
+  },
+  "services": {
+    "title": "Our Divine Services",
+    "subtitle": "Explore our comprehensive range of spiritual and astrological services",
+    "dailyHoroscope": {
+      "title": "Daily Horoscope",
+      "description": "Get your personalized daily horoscope based on your birth chart and planetary positions."
+    },
+    "kundliAnalysis": {
+      "title": "Kundli Analysis",
+      "description": "Detailed analysis of your birth chart with insights into your life path and destiny."
+    },
+    "liveConsultation": {
+      "title": "Live Consultation",
+      "description": "Connect with experienced astrologers for personalized guidance and solutions."
+    },
+    "pujaBooking": {
+      "title": "Puja Booking",
+      "description": "Book authentic Hindu pujas and rituals performed by experienced priests."
+    },
+    "gemstoneConsultation": {
+      "title": "Gemstone Consultation",
+      "description": "Discover the right gemstones to enhance your spiritual energy and well-being."
+    },
+    "vastu": {
+      "title": "Vastu Shastra",
+      "description": "Harmonize your living and working spaces with ancient Vastu principles."
+    }
+  },
+  "cta": {
+    "title": "Begin Your Spiritual Journey",
+    "description": "Join thousands of seekers who have found clarity and guidance through our divine services. Let us help you navigate life's path with ancient wisdom and modern understanding."
+  },
+  "features": {
+    "authentic": {
+      "title": "Authentic Vedic Wisdom",
+      "description": "Traditional Hindu astrology practices passed down through generations"
+    },
+    "experienced": {
+      "title": "Expert Astrologers",
+      "description": "Certified and experienced astrologers with deep knowledge of Vedic sciences"
+    },
+    "personalized": {
+      "title": "Personalized Guidance",
+      "description": "Customized solutions based on your unique birth chart and life circumstances"
+    },
+    "spiritual": {
+      "title": "Spiritual Growth",
+      "description": "Holistic approach to personal development and spiritual enlightenment"
+    }
+  }
+}

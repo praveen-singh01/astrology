@@ -1,0 +1,73 @@
+{
+  "buttons": {
+    "bookConsultation": "Book Consultation",
+    "exploreServices": "Explore Services",
+    "startJourney": "Start Your Journey",
+    "chatNow": "Chat Now",
+    "callNow": "Call Now",
+    "login": "Login",
+    "register": "Register",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "readMore": "Read More"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "consultation": "Consultation",
+    "about": "About",
+    "contact": "Contact",
+    "horoscope": "Horoscope",
+    "kundli": "Kundli",
+    "astrologers": "Astrologers",
+    "blog": "Blog"
+  },
+  "audio": {
+    "play": "Play",
+    "pause": "Pause",
+    "volume": "Volume",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "selectMantra": "Select Mantra",
+    "backgroundAudio": "Background Audio",
+    "spiritualSounds": "Spiritual Sounds",
+    "nowPlaying": "Now Playing",
+    "stop": "Stop",
+    "autoPlay": "Auto Play",
+    "enabled": "Audio Enabled",
+    "disabled": "Audio Disabled",
+    "settings": "Audio Settings"
+  },
+  "language": {
+    "english": "English",
+    "hindi": "हिंदी",
+    "selectLanguage": "Select Language",
+    "changeLanguage": "Change Language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "share": "Share",
+    "download": "Download"
+  },
+  "mantras": {
+    "omNamahShivaya": "Om Namah Shivaya",
+    "gayatriMantra": "Gayatri Mantra",
+    "mahamrityunjaya": "Mahamrityunjaya Mantra",
+    "hanuman": "Hanuman Chalisa",
+    "ganesh": "Ganesh Mantra",
+    "lakshmi": "Lakshmi Mantra",
+    "saraswati": "Saraswati Mantra"
+  }
+}

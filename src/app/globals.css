@@ -1,0 +1,471 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Premium Spiritual CSS Variables */
+    --bhagwa-primary: #ff9933;
+    --temple-gold: #facc15;
+    --deep-maroon: #8b1538;
+    --antique-gold: #d4af37;
+    --cream-warm: #f5e6c8;
+    --sacred-glow: rgba(255, 153, 51, 0.3);
+    --divine-shimmer: rgba(212, 175, 55, 0.4);
+
+    /* Sacred Geometry Patterns */
+    --mandala-size: 120px;
+    --om-size: 80px;
+    --lotus-size: 100px;
+  }
+
+  /* Dark Mode Variables */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    /* Night Sky Theme Variables */
+    --night-sky-primary: #0f172a;
+    --night-sky-secondary: #1e293b;
+    --starlight: #cbd5e1;
+    --cosmic-purple: #581c87;
+    --moonbeam: rgba(203, 213, 225, 0.3);
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-night-sky-500 text-night-sky-50;
+  }
+
+  /* Enhanced Typography */
+  .sanskrit-text {
+    font-family: 'Noto Sans Devanagari', 'Noto Serif Devanagari', serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  .spiritual-text-shadow {
+    text-shadow: 0 2px 4px rgba(255, 153, 51, 0.1);
+  }
+
+  .dark .spiritual-text-shadow {
+    text-shadow: 0 2px 4px rgba(203, 213, 225, 0.2);
+  }
+}
+
+@layer components {
+  .spiritual-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Enhanced Premium Buttons */
+  .spiritual-button {
+    @apply inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-lg shadow-lg text-white bg-gradient-bhagwa hover:bg-gradient-sacred-premium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bhagwa-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-xl hover:shadow-bhagwa-200/30;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spiritual-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .spiritual-button:hover::before {
+    left: 100%;
+  }
+
+  .spiritual-button-secondary {
+    @apply inline-flex items-center px-6 py-3 border-2 border-bhagwa-400 text-sm font-medium rounded-lg shadow-lg text-bhagwa-600 bg-white hover:bg-gradient-to-r hover:from-bhagwa-50 hover:to-temple-gold-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bhagwa-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-xl hover:border-bhagwa-500;
+  }
+
+  .spiritual-button-premium {
+    @apply inline-flex items-center px-8 py-4 border border-transparent text-base font-semibold rounded-xl shadow-xl text-white bg-gradient-divine-premium hover:bg-gradient-sacred-premium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bhagwa-400 transition-all duration-500 hover:scale-110 active:scale-95 hover:shadow-2xl;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Enhanced Form Elements */
+  .spiritual-input {
+    @apply block w-full rounded-lg border-2 border-gray-200 shadow-sm focus:border-bhagwa-400 focus:ring-bhagwa-400 focus:ring-2 sm:text-sm transition-all duration-300 hover:border-bhagwa-300 bg-white/80 backdrop-blur-sm;
+  }
+
+  .dark .spiritual-input {
+    @apply bg-night-sky-600/80 border-night-sky-400 text-night-sky-50 focus:border-bhagwa-400;
+  }
+
+  /* Premium Card Styles */
+  .spiritual-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-bhagwa-200 hover:bg-white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spiritual-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff9933, #facc15, #a855f7);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .spiritual-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .spiritual-card-enhanced {
+    @apply bg-gradient-to-br from-white/95 via-cream-50/80 to-bhagwa-50/60 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-bhagwa-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:border-bhagwa-300 hover:shadow-bhagwa-200/30;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spiritual-card-premium {
+    @apply bg-gradient-to-br from-white/90 via-temple-gold-50/70 to-antique-gold-50/60 backdrop-blur-lg rounded-3xl shadow-2xl p-10 border-2 border-antique-gold-200 hover:shadow-sacred transition-all duration-700 hover:-translate-y-4 hover:border-antique-gold-400;
+    background-size: 200% 200%;
+    animation: subtle-gradient-shift 8s ease infinite;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.1);
+  }
+
+  .spiritual-card-premium:hover {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 175, 55, 0.2), 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+
+  @keyframes subtle-gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Dark Mode Card Styles */
+  .dark .spiritual-card {
+    @apply bg-night-sky-600/80 border-night-sky-400 hover:border-bhagwa-400 hover:bg-night-sky-500/90;
+  }
+
+  .dark .spiritual-card-enhanced {
+    @apply bg-gradient-to-br from-night-sky-600/90 via-night-sky-500/80 to-divine-purple-900/60 border-night-sky-400 hover:border-bhagwa-400;
+  }
+
+  /* Enhanced Typography */
+  .spiritual-heading {
+    @apply text-4xl font-serif font-bold text-gray-900 mb-6 spiritual-text-shadow;
+  }
+
+  .dark .spiritual-heading {
+    @apply text-night-sky-50;
+  }
+
+  .spiritual-subheading {
+    @apply text-2xl font-serif font-semibold text-gray-700 mb-4 spiritual-text-shadow;
+  }
+
+  .dark .spiritual-subheading {
+    @apply text-night-sky-100;
+  }
+
+  .spiritual-text {
+    @apply text-lg text-gray-600 leading-relaxed;
+  }
+
+  .dark .spiritual-text {
+    @apply text-night-sky-200;
+  }
+
+  /* Enhanced Sacred Elements */
+  .sacred-glow {
+    @apply animate-sacred-glow;
+    filter: drop-shadow(0 0 10px var(--sacred-glow));
+  }
+
+  .om-pulse {
+    @apply animate-om-pulse;
+  }
+
+  .mandala-rotate {
+    @apply animate-mandala-rotate;
+  }
+
+  .aarti-glow {
+    @apply animate-aarti-glow;
+  }
+
+  .yantra-spin {
+    @apply animate-yantra-spin;
+  }
+
+  .divine-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
+    background-size: 200% 100%;
+    @apply animate-divine-shimmer;
+  }
+
+  .temple-bells {
+    @apply animate-temple-bells;
+  }
+
+  /* Enhanced Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, #ff9933, #d4af37, #facc15, #ff8800);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-text-shift 4s ease infinite;
+  }
+
+  @keyframes gradient-text-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .gradient-text-premium {
+    background: linear-gradient(135deg, #ff9933, #d4af37, #a855f7, #8b1538, #facc15);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: premium-gradient-shift 6s ease infinite;
+  }
+
+  @keyframes premium-gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    33% { background-position: 50% 100%; }
+    66% { background-position: 100% 50%; }
+  }
+
+  /* Sacred Borders */
+  .sacred-border {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #ff9933, #facc15, #a855f7, #8b1538) 1;
+    border-radius: 12px;
+  }
+
+  .sacred-border-animated {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #ff9933, #facc15, #a855f7, #8b1538) 1;
+    border-radius: 12px;
+    background-size: 400% 400%;
+    animation: border-gradient-shift 3s ease infinite;
+  }
+
+  @keyframes border-gradient-shift {
+    0%, 100% { border-image-source: linear-gradient(45deg, #ff9933, #facc15, #a855f7, #8b1538); }
+    25% { border-image-source: linear-gradient(45deg, #facc15, #a855f7, #8b1538, #ff9933); }
+    50% { border-image-source: linear-gradient(45deg, #a855f7, #8b1538, #ff9933, #facc15); }
+    75% { border-image-source: linear-gradient(45deg, #8b1538, #ff9933, #facc15, #a855f7); }
+  }
+}
+
+/* Premium Section Dividers & Temple Architecture */
+.temple-arch-divider {
+  position: relative;
+  height: 60px;
+  background: linear-gradient(135deg, #ff9933, #facc15);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  margin: 2rem 0;
+}
+
+.temple-arch-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #d4af37, #facc15);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.lotus-divider {
+  position: relative;
+  height: 40px;
+  background: linear-gradient(90deg, transparent, #ec4899, transparent);
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lotus-divider::before {
+  content: '🪷';
+  font-size: 2rem;
+  background: white;
+  padding: 0 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+}
+
+.mandala-section-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.mandala-section-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(255, 153, 51, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.05) 0%, transparent 70%);
+  animation: mandala-bg-rotate 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes mandala-bg-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.toran-border {
+  position: relative;
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, #ff9933, #facc15, #ff9933) 1;
+  padding-top: 2rem;
+}
+
+.toran-border::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 16px;
+  background: linear-gradient(135deg, #ff9933, #facc15);
+  border-radius: 8px 8px 0 0;
+}
+
+/* Sacred Geometry Backgrounds */
+.sacred-geometry-bg {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 153, 51, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 40% 60%, rgba(250, 204, 21, 0.05) 0%, transparent 50%);
+  background-size: 300px 300px, 400px 400px, 500px 500px;
+  animation: sacred-geometry-float 20s ease-in-out infinite;
+}
+
+@keyframes sacred-geometry-float {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  33% { background-position: 30% 70%, 70% 30%, 80% 20%; }
+  66% { background-position: 70% 30%, 30% 70%, 20% 80%; }
+}
+
+/* Night Sky Starfield */
+.starfield {
+  position: relative;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  overflow: hidden;
+}
+
+.starfield::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #cbd5e1, transparent),
+    radial-gradient(2px 2px at 40px 70px, #cbd5e1, transparent),
+    radial-gradient(1px 1px at 90px 40px, #cbd5e1, transparent),
+    radial-gradient(1px 1px at 130px 80px, #cbd5e1, transparent),
+    radial-gradient(2px 2px at 160px 30px, #cbd5e1, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: starfield-twinkle 4s ease-in-out infinite;
+}
+
+@keyframes starfield-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Custom animations */
+.diya-animation {
+  animation: flicker 2s infinite;
+}
+
+.lotus-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.lotus-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced spiritual animations */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes omPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes mandalaRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes sacredGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 153, 51, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 153, 51, 0.6); }
+}
+
+@keyframes divineShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes templeBells {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-bhagwa-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-bhagwa-500;
+}
